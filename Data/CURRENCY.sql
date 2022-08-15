@@ -1,0 +1,5 @@
+REM INSERTING into CURRENCY
+SET DEFINE OFF;
+Insert into CURRENCY (CURRENCYID,NAME) values (1,'BGN');
+Insert into CURRENCY (CURRENCYID,NAME) values (2,'EUR');
+Insert into CURRENCY (CURRENCYID,NAME) values (3,'USD');
