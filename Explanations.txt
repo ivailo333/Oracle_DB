@@ -1,0 +1,76 @@
+Таблиците на базата данни са:
+- Clients - полетата са - ClientID, Fname, Lname, Age, Professional, IBAN;
+- Employees - EmployeeID, Fname, Lname, Age, Position, Salary;
+- Credits - CreditID, Type, Syze, Term, Interest_rate, CurrencyID, ClientID;
+- Deposits - DepositID, Type, Syze, Term, Interest_rate, CurrencyID, ClientID;
+- Branches - BranchID, City, Address, EmployeeID;
+- Currency - CurrencyID, Name.
+
+Връзките между таблиците са:
+- Clients - Credits(ClientID), Deposits(ClientID);
+- Employees - Branches(EmployeeID);
+- Credits - Clients(ClientID), Currency(CurrencyID);
+- Deposits - Clients(ClientID), Currency(CurrencyID);
+- Branches - Employees(EmployeeID);
+- Currency - Credits(CurrencyID), Deposits(CurrencyID).
+
+Заявките са:
+- Показване на първото име и фамилията от таблицата "Clients";
+- Показване на полетата име и фамилията от таблицата "Employees", чийто заплати са под 3000 лв.;
+- Показване на всички кредити, чийто стойности са под 4000 лв.;
+- Показване на всички депозити, чийто стойности са между 2000 и 3000 лв.;
+- Показване на всички валути, които започват с буквата "B";
+- Показване на броя на клиентите от таблицата "Clients";
+- Показва броя на служителите, чийто заплати са под 3000 лв.;
+- Показва общата заплата на служителите;
+- Показва средната заплата на служителите;
+- Показва минималния лихвен процент по кредитите;
+- Показва максималния размер на кредитите;
+- Показване на клиентите, които имат кредити;
+- Показване на клиентите, които имат депозити;
+- Показване на данните от таблиците "Clients" и "Currency";
+- Показване на данни от таблиците "Deposits" и "Currency".
+
+
+В базата данни са направени следните sequences:
+- Sequence на таблицата "Clients";
+- Sequence на таблицата "Employees";
+- Sequence на таблицата "Credits";
+- Sequence на таблицата "Deposits";
+- Sequence на таблицата "Branches";
+- Sequence на таблицата "Currency".
+
+
+
+Тригерите в базата данни са:
+- За вмъкване в таблицата "Clients";
+- За вмъкване в таблицата "Employees";
+- За вмъкване в таблицата "Credits";
+- За вмъкване в таблицата "Deposits";
+- За вмъкване в таблицата "Branches";
+- За вмъкване в таблицата "Currency";
+- За обновяване на таблицата "Clients";
+- За обновяване на таблицата "Employees";
+- За изтриване на таблицата "Credits";
+- За изтриване на таблицата "Deposits".
+
+
+Процедурите са:
+- Показване на информацията за контакти на клиентите по даденото поле "ClientID";
+- Показване на информацията за контакти на служителите по даденото поле "EmployeeID";
+- Показване на информацията за клоновете на банката по даденото поле "BranchID";
+- Показване на информацията за кредитите по даденото поле "CreditID";
+- Показване на информацията за депозитите по даденото поле "DepositID".
+
+
+Функциите са:
+- Проверка дали съществува клиент, чийто номер е "ClientID";
+- Проверка заплатата на служителя, чийто номер е "EmployeeID";
+- Показва най-малкия кредит;
+- Показва най-големия депозит;
+- Показва града на един от клоновете.
+
+
+Индексите са:
+- Индексира таблицата "Clients" по колоните "Fname" и "Lname";
+- Индексира таблицата "Employees" по колоните "Fname" и "Lname"=
